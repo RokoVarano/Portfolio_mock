@@ -19,7 +19,7 @@
   left: 0;
   top: 0;
   right: 0;
-  margin-top: 50px;
+  margin-top: 10vh;
   height: 50px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -73,6 +73,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 7vh;
 }
 
 .navmob .namebar h1 {
@@ -81,6 +82,11 @@
 }
 
 .navmob .linkbar {
+  display: sticky;
+  height: 13vh;
+}
+
+.navmob .linkbar .link-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,18 +94,27 @@
       justify-content: space-around;
 }
 
-.navmob .linkbar a h1 {
-  margin: 0;
-  padding: 5px;
+.navmob .linkbar .link-menu a :hover {
+  color: orange;
 }
 
-.navmob .linkbar a :visited {
-  color: #c2720a;
+intro {
+  color: orange;
 }
 
 body {
-  font-size: 14px;
+  font-size: 18px;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body a {
@@ -113,85 +128,123 @@ body a:hover {
   color: #dbc78b;
 }
 
+body .intro {
+  height: 80vh;
+}
+
+body .intro .title {
+  font-size: 54px;
+  color: orange;
+  margin: 20px 0;
+}
+
+body .intro .spacer {
+  display: none;
+}
+
+body .intro .description {
+  font-size: 21.6px;
+}
+
+header {
+  width: 100%;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 90%;
+}
+
+.spacer {
+  height: 5vh;
+}
+
 h1 {
-  font-size: 21px;
-  font-weight: 700;
+  font-size: 27px;
+  font-weight: 350;
   font-family: 'Fredoka One', cursive;
 }
 
 h2 {
-  font-size: 19.6px;
-  font-weight: 700;
+  font-size: 25.2px;
+  font-weight: 350;
   font-family: 'Fredoka One', cursive;
 }
 
 h3 {
-  font-size: 18.2px;
-  font-weight: 700;
+  font-size: 23.4px;
+  font-weight: 350;
   font-family: 'Fredoka One', cursive;
 }
 
 h4 {
-  font-size: 16.8px;
-  font-weight: 700;
+  font-size: 21.6px;
+  font-weight: 350;
   font-family: 'Fredoka One', cursive;
 }
 
 h5 {
-  font-size: 15.4px;
-  font-weight: 700;
+  font-size: 19.8px;
+  font-weight: 350;
   font-family: 'Fredoka One', cursive;
 }
 
 h6 {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 350;
   font-family: 'Fredoka One', cursive;
 }
 
 p {
-  font-size: 14px;
-  line-height: 1.1;
+  font-size: 18px;
+  line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
 }
 
 @media (min-width: 768px) {
   body {
-    font-size: 16.8px;
+    font-size: 21.6px;
   }
   h1 {
-    font-size: 25.2px;
-    font-weight: 700;
+    font-size: 32.4px;
+    font-weight: 350;
   }
   h2 {
-    font-size: 23.52px;
-    font-weight: 700;
+    font-size: 30.24px;
+    font-weight: 350;
   }
   h3 {
-    font-size: 21.84px;
-    font-weight: 700;
+    font-size: 28.08px;
+    font-weight: 350;
   }
   h4 {
-    font-size: 20.16px;
-    font-weight: 700;
+    font-size: 25.92px;
+    font-weight: 350;
   }
   h5 {
-    font-size: 18.48px;
-    font-weight: 700;
+    font-size: 23.76px;
+    font-weight: 350;
   }
   h6 {
-    font-size: 16.8px;
-    font-weight: 700;
+    font-size: 21.6px;
+    font-weight: 350;
   }
   p {
-    font-size: 16.8px;
+    font-size: 21.6px;
     line-height: 1.1;
   }
 }
 
 @media (min-width: 992px) {
   body {
-    font-size: 19.6px;
+    font-size: 25.2px;
   }
   body .navtop {
     display: -webkit-box;
@@ -201,32 +254,44 @@ p {
   body .navmob {
     display: none;
   }
+  body .intro h1 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  body .intro .spacer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .intro .description {
+    font-size: 37.8px;
+  }
   h1 {
-    font-size: 29.4px;
-    font-weight: 700;
+    font-size: 37.8px;
+    font-weight: 350;
   }
   h2 {
-    font-size: 27.44px;
-    font-weight: 700;
+    font-size: 35.28px;
+    font-weight: 350;
   }
   h3 {
-    font-size: 25.48px;
-    font-weight: 700;
+    font-size: 32.76px;
+    font-weight: 350;
   }
   h4 {
-    font-size: 23.52px;
-    font-weight: 700;
+    font-size: 30.24px;
+    font-weight: 350;
   }
   h5 {
-    font-size: 21.56px;
-    font-weight: 700;
+    font-size: 27.72px;
+    font-weight: 350;
   }
   h6 {
-    font-size: 19.6px;
-    font-weight: 700;
+    font-size: 25.2px;
+    font-weight: 350;
   }
   p {
-    font-size: 19.6px;
+    font-size: 25.2px;
     line-height: 1.1;
   }
 }

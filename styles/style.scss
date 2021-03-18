@@ -7,10 +7,10 @@ $grid-gutter-width: 0;
 $spacer: 1rem;
 
 //custom font variables
-$font-size-mob: 14px;
+$font-size-mob: 18px;
 $font-size-tab: $font-size-mob * 1.2;
 $font-size-desk: $font-size-mob * 1.4;
-$font-weight-base: 700;
+$font-weight-base: 700 / 2;
 $font-family-base: 'Comic Neue', cursive !default;
 
 //lintern would not allow to use bootstrap variables directly, so...
@@ -51,7 +51,7 @@ $padding-base: 5px;
   left: 0;
   top: 0;
   right: 0;
-  margin-top: 50px;
+  margin-top: 10vh;
 
   height: 50px;
   justify-content: space-between;
@@ -94,32 +94,40 @@ $padding-base: 5px;
   .namebar {
     display: flex;
     justify-content: center;
+    height: 7vh;
     h1 {
       margin: 0;
       padding: $padding-base;
     }
   }
   .linkbar {
-    display: flex;
-    justify-content: space-around;
+    display: sticky;
+    height: 13vh;
 
-    a {    
-      h1 {
-      margin: 0;
-      padding: $padding-base;
-      }
-      :visited {
-        color: $orange-solid
+    .link-menu {
+      display: flex;
+      justify-content: space-around;
+  
+      a {  
+        :hover {
+          color: orange;
+        }
       }
     }
 
   }
+}
 
+intro {
+  color: orange;
 }
 
 body {
   font-size: $font-size-mob;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   a {
     text-decoration: none;
@@ -131,6 +139,39 @@ body {
       color: $yellow;
     }
   }
+
+  .intro {
+    height: 80vh;
+
+    .title {
+      font-size: $font-size-mob * 3;
+      color: orange;
+      margin: 20px 0;
+    }
+
+    .spacer {
+      display: none;
+    }
+
+    .description {
+      font-size: $font-size-mob * 1.2;
+    }
+  }
+}
+
+header {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90%;
+}
+
+.spacer {
+  height: 5vh;
 }
 
 h1 {
@@ -171,7 +212,7 @@ h6 {
 
 p {
   font-size: $font-size-mob * 1;
-  line-height: 1.1;
+  line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -228,6 +269,20 @@ p {
 
     .navmob {
       display: none;
+    }
+
+    .intro {
+      h1 {
+        align-self: flex-end;
+      }
+
+      .spacer {
+        display: flex;
+      }
+
+      .description {
+        font-size: $font-size-desk * 1.5;
+      }
     }
   }
 
