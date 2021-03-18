@@ -1,2 +1,271 @@
-@import 'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css'
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@300&display=swap');
+
+//bootstrap variables
+
+$grid-columns: 12;
+$grid-gutter-width: 0;
+$spacer: 1rem;
+
+//custom font variables
+$font-size-mob: 14px;
+$font-size-tab: $font-size-mob * 1.2;
+$font-size-desk: $font-size-mob * 1.4;
+$font-weight-base: 700;
+$font-family-base: 'Comic Neue', cursive !default;
+
+//lintern would not allow to use bootstrap variables directly, so...
+$orange-solid: #c2720a;
+$orange-white: #ebd1b0;
+$brown-solid: #2c1a03;
+$b-info: #17a2b8;
+$yellow: #dbc78b;
+$b-danger: #dc3545;
+$b-light: #f8f9fa;
+$b-dark: #343a40;
+
+$b-breakpoint-xs: 0;
+$b-breakpoint-sm: 576px;
+$b-breakpoint-md: 768px;
+$b-breakpoint-lg: 992px;
+$b-breakpoint-xl: 1200px;
+
+$padding-base: 5px;
+
+.solid{
+  background: $orange-solid;
+  color: $orange-white;
+}
+
+.solid-reverse{
+  background: $orange-white;
+  color: $orange-solid;
+}
+
+.dark{
+  background: $brown-solid;
+  color: $orange-white;
+}
+
+.navtop {
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin-top: 50px;
+
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+
+  .item {
+    padding: $padding-base * 3;
+    align-self: center;
+  }
+
+  .avatar-container {
+    display: flex;
+
+    .avatar {
+      height: 200px;
+      width: 200px;
+      margin: 80px 80px 0 80px;
+      border-radius: 100%;
+      border: 10px orange solid;
+    }
+  }
+
+  .link-menu {
+    display: flex;
+    margin-right: 60px;
+
+    a {
+      margin-left: 20px;
+      margin-right: 20px;
+
+      :hover {
+        color: orange;
+      }
+    }
+  }
+}
+
+.navmob {
+
+  .namebar {
+    display: flex;
+    justify-content: center;
+    h1 {
+      margin: 0;
+      padding: $padding-base;
+    }
+  }
+  .linkbar {
+    display: flex;
+    justify-content: space-around;
+
+    a {    
+      h1 {
+      margin: 0;
+      padding: $padding-base;
+      }
+      :visited {
+        color: $orange-solid
+      }
+    }
+
+  }
+
+}
+
+body {
+  font-size: $font-size-mob;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Open Sans', sans-serif;
+
+    &:hover {
+      text-decoration: none;
+      color: $yellow;
+    }
+  }
+}
+
+h1 {
+  font-size: $font-size-mob * 1.5;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h2 {
+  font-size: $font-size-mob * 1.4;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h3 {
+  font-size: $font-size-mob * 1.3;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h4 {
+  font-size: $font-size-mob * 1.2;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h5 {
+  font-size: $font-size-mob * 1.1;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h6 {
+  font-size: $font-size-mob * 1;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+p {
+  font-size: $font-size-mob * 1;
+  line-height: 1.1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+//tablet-size
+@media (min-width: $b-breakpoint-md) {
+  body {
+    font-size: $font-size-tab;
+  }
+
+  h1 {
+    font-size: $font-size-tab * 1.5;
+    font-weight: $font-weight-base;
+  }
+
+  h2 {
+    font-size: $font-size-tab * 1.4;
+    font-weight: $font-weight-base;
+  }
+
+  h3 {
+    font-size: $font-size-tab * 1.3;
+    font-weight: $font-weight-base;
+  }
+
+  h4 {
+    font-size: $font-size-tab * 1.2;
+    font-weight: $font-weight-base;
+  }
+
+  h5 {
+    font-size: $font-size-tab * 1.1;
+    font-weight: $font-weight-base;
+  }
+
+  h6 {
+    font-size: $font-size-tab * 1;
+    font-weight: $font-weight-base;
+  }
+
+  p {
+    font-size: $font-size-tab * 1;
+    line-height: 1.1;
+  }
+}
+
+//desktop size
+@media (min-width: $b-breakpoint-lg) {
+  body {
+    font-size: $font-size-desk;
+
+    .navtop {
+      display: flex;
+    }
+
+    .navmob {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-size: $font-size-desk * 1.5;
+    font-weight: $font-weight-base;
+  }
+
+  h2 {
+    font-size: $font-size-desk * 1.4;
+    font-weight: $font-weight-base;
+  }
+
+  h3 {
+    font-size: $font-size-desk * 1.3;
+    font-weight: $font-weight-base;
+  }
+
+  h4 {
+    font-size: $font-size-desk * 1.2;
+    font-weight: $font-weight-base;
+  }
+
+  h5 {
+    font-size: $font-size-desk * 1.1;
+    font-weight: $font-weight-base;
+  }
+
+  h6 {
+    font-size: $font-size-desk * 1;
+    font-weight: $font-weight-base;
+  }
+
+  p {
+    font-size: $font-size-desk * 1;
+    line-height: 1.1;
+  }
+}
+
+//non-general classes here
 
