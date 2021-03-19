@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@300&display=swap");
+.solid {
+  background: #c2720a;
+  color: #ebd1b0;
+}
+
+.solid-reverse {
+  background: #ebd1b0;
+  color: #c2720a;
+}
+
+.dark {
+  background: #2c1a03;
+  color: #ebd1b0;
+}
+
+.dark-reverse {
+  background: #ebd1b0;
+  color: #2c1a03;
+}
+
+.only-desk {
+  display: none;
+}
+
+.navtop {
+  left: 0;
+  top: 0;
+  right: 0;
+  margin-top: 10vh;
+  height: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navtop .item {
+  padding: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navtop .avatar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navtop .avatar-container .avatar {
+  height: 200px;
+  width: 200px;
+  margin: 80px 80px 0 80px;
+  border-radius: 100%;
+  border: 10px orange solid;
+}
+
+.navtop .link-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 60px;
+}
+
+.navtop .link-menu a {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navtop .link-menu a :hover {
+  color: orange;
+}
+
+.navmob .namebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: auto;
+}
+
+.navmob .namebar h1 {
+  margin: 0;
+  padding: 5px;
+}
+
+.navmob .linkbar {
+  display: sticky;
+}
+
+.navmob .linkbar .link-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navmob .linkbar .link-menu a :hover {
+  color: orange;
+}
+
+body {
+  font-size: 18px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body a {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body a:hover {
+  text-decoration: none;
+  color: #dbc78b;
+}
+
+body .intro {
+  height: 80vh;
+}
+
+body .intro .title {
+  font-size: 54px;
+  color: orange;
+  margin: 20px 0;
+}
+
+body .intro .description {
+  font-size: 21.6px;
+}
+
+body .things {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .things .titlepic {
+  height: 33%;
+  position: relative;
+}
+
+body .things .titlepic .projectpic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../assets/pictures/avatar.jpg);
+  background-position: top left;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body .things .titlepic .projectpic .whitewash {
+  background: rgba(255, 255, 255, 0.479);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .things .titlepic .projectpic .whitewash .projecttitle {
+  top: 0;
+  z-index: 1;
+}
+
+.listholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+header {
+  width: 100%;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+  padding: 0 5vw;
+}
+
+.btn {
+  background: orange;
+  color: #2c1a03;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 25.2px;
+  border-radius: 40%;
+  padding: 10px;
+}
+
+article {
+  border: 1px solid #2c1a03;
+  width: 94%;
+  padding: 3%;
+  height: 40vh;
+  margin-bottom: 2vh;
+}
+
+.spacer {
+  height: 5vh;
+}
+
+h1 {
+  font-size: 27px;
+  font-weight: 350;
+  font-family: 'Fredoka One', cursive;
+}
+
+h2 {
+  font-size: 25.2px;
+  font-weight: 350;
+  font-family: 'Fredoka One', cursive;
+}
+
+h3 {
+  font-size: 23.4px;
+  font-weight: 350;
+  font-family: 'Fredoka One', cursive;
+}
+
+h4 {
+  font-size: 21.6px;
+  font-weight: 350;
+  font-family: 'Fredoka One', cursive;
+}
+
+h5 {
+  font-size: 19.8px;
+  font-weight: 350;
+  font-family: 'Fredoka One', cursive;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 350;
+  font-family: 'Fredoka One', cursive;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 992px) {
+  .only-mob {
+    display: none;
+  }
+  article {
+    width: 43%;
+  }
+  .project-articles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin-bot: 5vh;
+  }
+  .listholder {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body {
+    font-size: 25.2px;
+  }
+  body .navtop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .navmob {
+    display: none;
+  }
+  body .intro {
+    height: auto;
+  }
+  body .intro h1 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  body .intro .spacer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .intro .description {
+    font-size: 37.8px;
+  }
+  h1 {
+    font-size: 37.8px;
+    font-weight: 350;
+  }
+  h2 {
+    font-size: 35.28px;
+    font-weight: 350;
+  }
+  h3 {
+    font-size: 32.76px;
+    font-weight: 350;
+  }
+  h4 {
+    font-size: 30.24px;
+    font-weight: 350;
+  }
+  h5 {
+    font-size: 27.72px;
+    font-weight: 350;
+  }
+  h6 {
+    font-size: 25.2px;
+    font-weight: 350;
+  }
+  p {
+    font-size: 25.2px;
+    line-height: 1.1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

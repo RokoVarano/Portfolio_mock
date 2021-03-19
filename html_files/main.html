@@ -5,11 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Page Title</title>
   <meta name="description" content="My Page Description">
-  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 
-<body>
+<body class='dark'>
+  <header>
+    <nav class='navtop solid container-fluid only-desk'>
+      <div class = 'avatar-container'>
+        <img src="../assets/pictures/avatar.jpg" alt="..." class="avatar">
+        <h1 class='item'>Rodrigo Ibaceta</h1>
+      </div>
+      <div class='link-menu'>
+        <a href='https://twitter.com/RodrigoIbacet11'><h1><i class="fab fa-twitter"></i></h1></a>
+        <a href='https://www.linkedin.com/in/rodrigo-ibaceta/'><h1><i class="fab fa-linkedin"></i></h1></a>
+        <a href='https://github.com/RokoVarano'><h1><i class="fab fa-github"></i></h1></a>        
+      </div>
+    </nav>
+    <nav class='navmob only-mob'>
+      <div class='namebar solid'>
+        <h1>Rodrigo Ibaceta</h1>
+      </div>
+      <div class='linkbar solid-reverse container-fluid'>
+        <div class='link-menu'>
+          <a href='https://twitter.com/RodrigoIbacet11'><h1><i class="fab fa-twitter"></i></h1></a>
+          <a href='https://www.linkedin.com/in/rodrigo-ibaceta/'><h1><i class="fab fa-linkedin"></i></h1></a>
+          <a href='https://github.com/RokoVarano'><h1><i class="fab fa-github"></i></h1></a>        
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class='intro'>
+    <h1 class='title'>I'm a software developer!</h1>
+    <div class='spacer only-desk'></div>
+    <p class='description'>I can help you with React and Rails projects. Browse around to know me better. Contact me to make your ideas a reality!</p>
+  </section>
+
+  <section class='dark-reverse things'>
+    <h2>Some things I've done</h2>
+    <div class='project-articles'>
+    <article>
+      <div class='titlepic'>
+        <div class='projectpic'>
+          <div class='whitewash'>
+            <h4 class='projecttitle'>Project Title</h4>
+          </div>
+        </div>
+      </div>
+      <p class='project-description'>
+        Donskoy kitten yet lynx american bobtail or manx. Bobcat tabby persian birman. Abyssinian bengal so siberian yet egyptian mau bengal russian blue yet norwegian forest.
+      </p>
+    </article>
+    <article>
+      <div class='titlepic'>
+        <div class='projectpic'>
+          <div class='whitewash'>
+            <h4 class='projecttitle'>Project Title</h4>
+          </div>
+        </div>
+      </div>
+      <p class='project-description'>
+        Donskoy kitten yet lynx american bobtail or manx. Bobcat tabby persian birman. Abyssinian bengal so siberian yet egyptian mau bengal russian blue yet norwegian forest.
+      </p>
+    </article>
+    </div>
+    <div class='project-articles'>
+    <article>
+      <div class='titlepic'>
+        <div class='projectpic'>
+          <div class='whitewash'>
+            <h4 class='projecttitle'>Project Title</h4>
+          </div>
+        </div>
+      </div>
+      <p class='project-description'>
+        Donskoy kitten yet lynx american bobtail or manx. Bobcat tabby persian birman. Abyssinian bengal so siberian yet egyptian mau bengal russian blue yet norwegian forest.
+      </p>
+    </article>
+    <article>
+      <div class='titlepic'>
+        <div class='projectpic'>
+          <div class='whitewash'>
+            <h4 class='projecttitle'>Project Title</h4>
+          </div>
+        </div>
+      </div>
+      <p class='project-description'>
+        Donskoy kitten yet lynx american bobtail or manx. Bobcat tabby persian birman. Abyssinian bengal so siberian yet egyptian mau bengal russian blue yet norwegian forest.
+      </p>
+    </article>
+  </div>
+  </section>
+
+  <section class='dark'>
+
+    <h4>Technologies I know</h4>
+    <div class='listholder'>
+      <ul>
+        <li><a href='https://developer.mozilla.org/es/docs/Web/Guide/HTML/HTML5'>HTML5</a></li>
+        <li><a href='https://sass-lang.com/'>CSS/SASS</a></li>
+      </ul>
+      <ul>
+        <li><a href='https://www.ruby-lang.org/en/'>RUBY</a></li>
+        <li><a href='https://rubyonrails.org/'>RUBY ON RAILS</a></li>
+        <li><a href='https://rspec.info/'>RSPEC</a></li>
+      </ul>  
+      <ul>
+        <li><a href='https://developer.mozilla.org/es/docs/Web/JavaScript'>JAVASCRIPT</a></li>
+        <li><a href='https://reactjs.org/'>REACT</a></li>
+      </ul>  
+      <ul>
+        <li><a href='https://www.python.org/'>PYTHON</a></li>
+      </ul>
+      <ul>
+        <li><a href='https://git-scm.com/'>GIT</a></li>
+        <li><a href='https://github.com/'>GITHUB</a></li>
+      </ul>
+    </div>
+    <div class='spacer'></div>
+    <button type="button" class="btn">My CV</button>
+    <div class='spacer'></div>
+    
+  </section>
+
 </body>
 
 </html>

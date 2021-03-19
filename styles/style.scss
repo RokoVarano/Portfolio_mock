@@ -1,2 +1,370 @@
-@import 'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css'
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@300&display=swap');
+
+//bootstrap variables
+
+$grid-columns: 12;
+$grid-gutter-width: 0;
+$spacer: 1rem;
+
+//custom font variables
+$font-size-mob: 18px;
+$font-size-tab: $font-size-mob * 1.2;
+$font-size-desk: $font-size-mob * 1.4;
+$font-weight-base: 700 / 2;
+$font-family-base: 'Comic Neue', cursive !default;
+
+//lintern would not allow to use bootstrap variables directly, so...
+$orange-solid: #c2720a;
+$orange-white: #ebd1b0;
+$brown-solid: #2c1a03;
+$b-info: #17a2b8;
+$yellow: #dbc78b;
+$b-danger: #dc3545;
+$b-light: #f8f9fa;
+$b-dark: #343a40;
+
+$b-breakpoint-xs: 0;
+$b-breakpoint-sm: 576px;
+$b-breakpoint-md: 768px;
+$b-breakpoint-lg: 992px;
+$b-breakpoint-xl: 1200px;
+
+$padding-base: 5px;
+
+.solid{
+  background: $orange-solid;
+  color: $orange-white;
+}
+
+.solid-reverse{
+  background: $orange-white;
+  color: $orange-solid;
+}
+
+.dark{
+  background: $brown-solid;
+  color: $orange-white;
+}
+
+.dark-reverse{
+  background: $orange-white;
+  color: $brown-solid;
+}
+
+.only-desk {
+  display: none
+}
+
+.navtop {
+  left: 0;
+  top: 0;
+  right: 0;
+  margin-top: 10vh;
+
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+
+  .item {
+    padding: $padding-base * 3;
+    align-self: center;
+  }
+
+  .avatar-container {
+    display: flex;
+
+    .avatar {
+      height: 200px;
+      width: 200px;
+      margin: 80px 80px 0 80px;
+      border-radius: 100%;
+      border: 10px orange solid;
+    }
+  }
+
+  .link-menu {
+    display: flex;
+    margin-right: 60px;
+
+    a {
+      margin-left: 20px;
+      margin-right: 20px;
+
+      :hover {
+        color: orange;
+      }
+    }
+  }
+}
+
+.navmob {
+
+  .namebar {
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    h1 {
+      margin: 0;
+      padding: $padding-base;
+    }
+  }
+  .linkbar {
+    display: sticky;
+
+    .link-menu {
+      display: flex;
+      justify-content: space-around;
+  
+      a {  
+        :hover {
+          color: orange;
+        }
+      }
+    }
+
+  }
+}
+
+body {
+  font-size: $font-size-mob;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Open Sans', sans-serif;
+
+    &:hover {
+      text-decoration: none;
+      color: $yellow;
+    }
+  }
+
+  .intro {
+    height: 80vh;
+
+    .title {
+      font-size: $font-size-mob * 3;
+      color: orange;
+      margin: 20px 0;
+    }
+
+    .description {
+      font-size: $font-size-mob * 1.2;
+    }
+  }
+
+  .things {
+    align-items: center;
+
+    .titlepic {
+      height : 33%;
+      position: relative;
+
+      .projectpic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../assets/pictures/avatar.jpg);
+        background-position: top left;
+        background-size: cover;
+        width:100%;
+        height: 100%;
+
+        .whitewash {
+          background: rgba(255, 255, 255, 0.479);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          display: flex;
+          justify-content: center;
+          .projecttitle {
+            top: 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.listholder {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+header {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  width: 90vw;
+  padding: 0 5vw;
+}
+
+.btn {
+  background: orange;
+  color: $brown-solid;
+  max-width: fit-content;
+  font-size: $font-size-mob * 1.4;
+  border-radius: 40%;
+  padding: 10px;
+}
+
+article {
+  border: 1px solid $brown-solid;
+  width: 94%;
+  padding: 3%;
+  height: 40vh;
+  margin-bottom: 2vh;
+}
+
+.spacer {
+  height: 5vh;
+}
+
+h1 {
+  font-size: $font-size-mob * 1.5;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h2 {
+  font-size: $font-size-mob * 1.4;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h3 {
+  font-size: $font-size-mob * 1.3;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h4 {
+  font-size: $font-size-mob * 1.2;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h5 {
+  font-size: $font-size-mob * 1.1;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+h6 {
+  font-size: $font-size-mob * 1;
+  font-weight: $font-weight-base;
+  font-family: 'Fredoka One', cursive;
+}
+
+p {
+  font-size: $font-size-mob * 1;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+//desktop size
+@media (min-width: $b-breakpoint-lg) {
+
+  .only-mob {
+    display: none;
+  }
+
+  article {
+    width: 43%;
+  }
+  
+  .project-articles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bot: 5vh;
+  }
+
+  .listholder {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  body {
+    font-size: $font-size-desk;
+
+    .navtop {
+      display: flex;
+    }
+
+    .navmob {
+      display: none;
+    }
+
+    .intro {
+      height: auto;
+
+      h1 {
+        align-self: flex-end;
+      }
+
+      .spacer {
+        display: flex;
+      }
+
+      .description {
+        font-size: $font-size-desk * 1.5;
+      }
+    }
+  }
+
+  h1 {
+    font-size: $font-size-desk * 1.5;
+    font-weight: $font-weight-base;
+
+
+  }
+
+  h2 {
+    font-size: $font-size-desk * 1.4;
+    font-weight: $font-weight-base;
+  }
+
+  h3 {
+    font-size: $font-size-desk * 1.3;
+    font-weight: $font-weight-base;
+  }
+
+  h4 {
+    font-size: $font-size-desk * 1.2;
+    font-weight: $font-weight-base;
+  }
+
+  h5 {
+    font-size: $font-size-desk * 1.1;
+    font-weight: $font-weight-base;
+  }
+
+  h6 {
+    font-size: $font-size-desk * 1;
+    font-weight: $font-weight-base;
+  }
+
+  p {
+    font-size: $font-size-desk * 1;
+    line-height: 1.1;
+  }
+}
+
+//non-general classes here
 
