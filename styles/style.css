@@ -188,6 +188,19 @@ body .things .titlepic .projectpic .whitewash .projecttitle {
   z-index: 1;
 }
 
+.listholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
 header {
   width: 100%;
 }
@@ -201,10 +214,22 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90vw;
   padding: 0 5vw;
+}
+
+.btn {
+  background: orange;
+  color: #2c1a03;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 25.2px;
+  border-radius: 40%;
+  padding: 10px;
 }
 
 article {
@@ -277,6 +302,16 @@ p {
             justify-content: space-between;
     width: 100%;
     margin-bot: 5vh;
+  }
+  .listholder {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   body {
     font-size: 25.2px;
